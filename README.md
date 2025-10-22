@@ -23,25 +23,21 @@ a) Levantamos la app en el navegador con:
 
 ionic serve
 
-b) Abre la URL que muestra Ionic (p. ej. http://localhost:8100).
+b) En tab1 se muestra las tarjetas de recentExpenses es decir los datos en memoria.
 
-c) En Tab1 deberías ver las tarjetas de recentExpenses (datos en memoria).
-
-d) Haz clic en "Agregar nuevo gasto" para comprobar que el modal y los inputs están visibles (nota: la cámara no funciona en navegador).
-
-## 3) Compilar y desplegar en Android (para probar cámara y filesystem)
+## 3) Compilar y desplegacion en Android
    
-a) Genera la build web:
+a) Generamos la build web con:
 
-b) Copia assets a Capacitor y abre Android Studio:
+ionic build
 
-c) Desde Android Studio ejecuta la app en un emulador o dispositivo físico.
+b) Se copia assets a Capacitor y abre Android Studio con:
 
-d) Cuando la app pida permisos (cámara/almacenamiento) acéptalos.
+npx cap open android
 
-## 4) Flujo de agregar gasto y guardar foto (en dispositivo)
+## 4) Flujo de agregar gasto y guardar foto
    
-a) En la app, ve a Tab1 y pulsa “Agregar nuevo gasto”.
+a) En la app, vamos a Tab1 y pulsa “Agregar nuevo gasto”.
 
 b) Rellena Descripción, Monto, “Quién pagó” y pulsa “Tomar foto del recibo” (se abrirá la cámara).
 
@@ -51,11 +47,9 @@ d) Tras guardar, el gasto aparece inmediatamente en Tab1 (lista local) y queda p
 
 ## 5) Ver recibos y depurar preview en Tab2
    
-a) Abre Tab2 — debería mostrarse cada gasto registrado con su información y miniatura (preview) de la foto.
+a) Abre Tab2 — debería mostrarse cada gasto registrado con su información y miniatura de la foto.
 
 b) Si la miniatura no aparece, inspecciona desde Android Studio → Device File Explorer la carpeta de la app: recibos/ y comprueba expenses.json y los archivos .jpeg.
 
-c) Revisa logcat (Android Studio) para errores relacionados con Camera o Filesystem (permisos o rutas).
-
-d) Soluciones rápidas: ejecutar npx cap sync android, reinstalar plugins, conceder permisos manualmente y reconstruir.
+c) Revisamos logcat en Android Studio para observar todos los errores relacionados o que se generen durante la ejecucion de la apk y con Camera o Filesystem.
 
