@@ -3,7 +3,7 @@ Elaborado por: Joshua Morocho
 
 En este proyecto Tab1 muestra gastos recientes y permite agregar uno nuevo (form + cámara). Tab2 lista los recibos guardados con preview de la foto.}
 
-El apk funcional esta nombrado como apk_debug ubicado en la raiz del proyecto
+El apk funcional esta nombrado como apk-debug ubicado en la raiz del proyecto
 
 ## 1) Preparamos el entorno
    
